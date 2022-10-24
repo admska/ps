@@ -1,10 +1,10 @@
 # Variables
 Remove-Variable * -ErrorAction SilentlyContinue
-$exportPath = "C:\ADM\MUN\Export\MUN_Operators_$(get-date -format `"yyyyMMdd_hhmmsstt`").csv"
-$users = get-content -path "C:\ADM\MUN\Users_import.txt"
+$exportPath = "C:\Temp\Export_$(get-date -format `"yyyyMMdd_hhmmsstt`").csv"
+$users = get-content -path "C:\Temp\Users_import.txt"
 $counter = 0
 
-#Funkcija
+#Function
 foreach ($user in $users) {
     $counter++
     Write-Progress -Id 0 -Activity 'Checking User' -Status "Processing $($counter) of $($users.count)" -CurrentOperation $user -PercentComplete (($counter/$users.Count) * 100)
