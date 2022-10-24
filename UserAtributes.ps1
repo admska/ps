@@ -1,4 +1,4 @@
-# Varijable
+# Variables
 Remove-Variable * -ErrorAction SilentlyContinue
 $exportPath = "C:\ADM\MUN\Export\MUN_Operators_$(get-date -format `"yyyyMMdd_hhmmsstt`").csv"
 $users = get-content -path "C:\ADM\MUN\Users_import.txt"
